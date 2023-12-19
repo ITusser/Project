@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Landing Page</title>
+        <link rel="stylesheet" type="text/css" href="styless.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background: url('circle.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        min-height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    header, footer {
+        width: 98%;
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        z-index: 99;
+        border: 2px solid rgba(255, 255, 255, .5);
+        color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+    }
+
+    header {
+        margin-top: 10px;
+    }
+
+    .logo1 {
+        font-size: 2em;
+        color: #fff;
+        user-select: none;
+        transition: all 0.3s ease 0s;
+    }
+
+    .logo1:hover {
+        color: #5b1ebd;
+    }
+
+    .nav .navi {
+        position: relative;
+        font-size: 1.1em;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 20px;
+    }
+
+    .nav .navi::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .5s;
+    }
+
+    .nav .navi:hover::after {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+
+    .nav .profile {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 9px 12px;
+        background-color: rgb(168, 127, 216);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+
+    .nav .profile:hover {
+        background-color: rgba(133, 35, 224, 0.8);
+    }
+
+    footer {
+        padding: 0;
+        text-align: center;
+        bottom: 0;
+        margin-bottom: 10px;
+    }
+
+    footer h2, footer p {
+        font-size: 14px;
+    }
+
+    footer h2 {
+        color: white;
+        transition: all 0.3s ease 0s;
+    }
+
+    footer h2:hover {
+        color: #a486d3;
+    }
+
+    footer p {
+        color: white;
+        transition: all 0.3s ease 0s;
+    }
+
+    footer p:hover {
+        color: #a486d3;
+    }
+
+    .wrapper {
+        width: 90%;
+        max-width: 350px;
+        height: 475px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+        text-align: center; 
+        align-items: center;
+        flex-shrink: 0;
+        margin-top: 11%;
+        margin-bottom: 10px;
+        margin: 11% auto 10px;
+    }
+
+    .wrapper h1 {
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .wrapper img {
+        width: 100%;
+        height: auto;
+        margin-top: -20px;
+    }
+
+    .wrapper .wra1 i, .wrapper .wra2 i, .wrapper .wra3 i {
+        margin-right: 10%;
+        margin-left: 6%;
+        color: #fff;
+    }
+
+    .wrapper .wra1 p, .wrapper .wra2 p, .wrapper .wra3 p {
+        color: #fff;
+        text-align: left;
+        margin-left: 20%;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .wra1, .wra2, .wra3 {
+        margin-top: -8%;
+    }
+
+    .wrapper .but1, .wrapper .but2, .wrapper .but3 {
+        width: 200px;
+        height: 50px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        background: transparent;
+        color: #fff;
+        border: 2px solid rgba(255, 255, 255, .5);
+        transition: all 0.3s ease 0s;
+        margin-top: 20px;
+    }
+
+    .wrapper .but1:hover{
+        background: #5d5668;
+    } 
+
+    .wrapper .but2:hover{
+        background: #a486d3;
+    }
+
+    .wrapper .but3:hover {
+        background: #5b1ebd;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .wrapper {
+            width: 90%;
+            max-width: 100%;
+            margin-top: 5%;
+            margin-bottom: 20px;
+        }
+
+        .wrapper img {
+            margin-top: -10px;
+        }
+
+        .wrapper .wra1 p, .wrapper .wra2 p, .wrapper .wra3 p {
+            margin-left: 10%;
+        }
+    }
+</style>
+<script>
+    function pur1() {
+        var totalPrice = 20;
+        var cashInput = parseFloat(prompt("Enter the cash amount:"));
+    
+        if (isNaN(cashInput) || cashInput <= 0) {
+            alert("Grave nagud nang --0 oi, Layaaaaaaass!");
+            return;
+        }
+    
+        if (cashInput < totalPrice) {
+            alert("Not enough Mana!, Hoy Kuwang!!");
+        } else {
+            var change = cashInput - totalPrice;
+            alert("Change: " + change.toFixed(2));
+            alert("Transaction completed. Thank you!");
+        }
+    }
+    
+    
+    function pur2() {
+        var totalPrice = 50;
+        var cashInput = parseFloat(prompt("Enter the cash amount:"));
+    
+        if (isNaN(cashInput) || cashInput <= 0) {
+            alert("Grave nagud nang --0 oi, Layaaaaaaass!");
+            return;
+        }
+    
+        if (cashInput < totalPrice) {
+            alert("Not enough Mana!, Hoy Kuwang!!");
+        } else {
+            var change = cashInput - totalPrice;
+            alert("Change: " + change.toFixed(2));
+            alert("Transaction completed. Thank you!");
+        }
+    }
+    
+    function pur3() {
+        var totalPrice = 100;
+        var cashInput = parseFloat(prompt("Enter the cash amount:"));
+    
+        if (isNaN(cashInput) || cashInput <= 0) {
+            alert("Grave nagud nang --0 oi, Layaaaaaaass!");
+            return;
+        }
+    
+        if (cashInput < totalPrice) {
+            alert("Not enough Mana!, Hoy Kuwang!!");
+        } else {
+            var change = cashInput - totalPrice;
+            alert("Change: " + change.toFixed(2));
+            alert("Transaction completed. Thank you!");
+        }
+    }    
+</script>
+</head>
+<body>
+    <header>
+        <h2 class="logo1">DiVinCh</h2>
+        <nav class="nav">
+            <a class="navi" href="#">Home</a>
+            <a class="navi" href="#">Blog</a>
+            <a class="navi" href="#">FAQ</a>
+            <a class="navi" href="#">About</a>
+            <a class="navi" href="#">Info</a>
+            <a class="navi" href="#">Tricks</a>
+            <a class="cta" href="profile.html" target="self"><button class="profile"><i class="fa fa-user" aria-hidden="true"></i></button></a>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <h1>BASIC</h1>
+        <img src="Project-removebg-preview.png" alt="circle with 20pesos" class="basicimg">
+        <div class="wra1">
+            <p><i class="fa fa-check" aria-hidden="true" id="i1"></i>Black Magic</p>
+            <p><i class="fa fa-times" aria-hidden="true"></i>Grimoire</p>
+            <p><i class="fa fa-times" aria-hidden="true"></i>Black Magic Spells</p>
+            <p><i class="fa fa-times" aria-hidden="true"></i>Extra Black Mana</p>
+        </div> <a class="cta" href="#"><button class="but1" onclick="pur1()">Subscribe</button></a>
+    </div> <div class="wrapper">
+        <h1>STANDARD</h1>
+        <img src="Project-removebg-preview2.png" alt="circle with 50pesos" class="basicimg">
+        <div class="wra2"> <p><i class="fa fa-check" aria-hidden="true" id="i2"></i>Black Magic</p>
+            <p><i class="fa fa-check" aria-hidden="true" id="i2"></i>Grimoire</p>
+            <p><i class="fa fa-times" aria-hidden="true"></i>Black Magic Spells</p>
+            <p><i class="fa fa-times" aria-hidden="true"></i>Extra Black Mana</p>
+        </div> <a class="cta" href="#"><button class="but2" onclick="pur2()">Subscribe</button></a> </div>
+        <div class="wrapper">
+            <h1>PREMIUM</h1>
+            <img src="Project__1_-removebg-preview.png" alt="circle with 100pesos" class="basicimg">
+            <div class="wra3">
+                <p><i class="fa fa-check" aria-hidden="true" id="i3"></i>Black Magic</p>
+                <p><i class="fa fa-check" aria-hidden="true" id="i3"></i>Grimoire</p>
+                <p><i class="fa fa-check" aria-hidden="true" id="i3"></i>Black Magic Spells</p>
+                <p><i class="fa fa-check" aria-hidden="true" id="i3"></i>Extra Black Mana</p>
+            </div> <a class="cta" href="#"><button class="but3" onclick="pur3()">Subscribe</button></a>
+        </div>
+        <footer>
+            <h2>© Copyright Reserved</h2>
+            <p>Fuentes, Vinch<br>@ your service</p>
+        </footer>
+    </body>
+</html>

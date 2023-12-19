@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+        width: 98%;
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        z-index: 99;
+        border: 2px solid rgba(255, 255, 255, .5);
+        color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        justify-content: space-between;
+    align-items: center;
+    display: flex;
+        margin-top: 10px;
+    }
+.profile {
+    margin-right: 100px;
+    padding: 9px 12px;
+    background-color: rgb(168, 127, 216);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.profile:hover {
+    background-color: rgba(133, 35, 224, 0.8);
+}
+.back {
+    margin-left: 50px;
+    padding: 9px 12px;
+    background-color: rgb(168, 127, 216);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-family: 'Montserrat', sans-serif;
+}
+.back:hover {
+    background-color: rgba(133, 35, 224, 0.8);
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: url('circle.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-card {
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    color: #fff;
+    margin-top: 100px;
+}
+.cover-pic {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+}
+.profile-pic {
+    width: 140px;
+    border-radius: 50%;
+    margin-top: -70px;
+    transition: box-shadow 0.5s;
+}
+.profile-pic:hover {
+    box-shadow: 0 0 0 5px #3a255b;
+}
+.profile-card h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.profile-card p {
+    font-family: 'Montserrat', sans-serif;
+}
+.follow-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(168, 127, 216);
+    color: #fff;
+    padding: 6px 35px;
+    margin: 25px 0;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 20px;
+    transition: all 0.3s ease 0s;
+}
+.follow-btn:hover {
+    background: #3a255b;
+}
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+.row h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+.row p {
+    font-family: 'Montserrat', sans-serif;
+}
+.view-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(168, 127, 216);
+    color: #fff;
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 18px;
+    transition: all 0.3s ease 0s;
+}
+.view-btn:hover {
+    background: #3a255b;
+}
+.popup {
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    backdrop-filter: blur(20px);
+
+}
+.open-popup {
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+.popup h2{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    margin: 30px 0 10px;
+}
+.popup .button1 {
+    width: 100px;
+    margin-top: 20px;
+    padding: 10px 0;
+    background: #3a255b;
+    color: #fff;
+    margin-left: -8px;
+    font-family: 'Montserrat', sans-serif;
+    border: 0;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+}
+.popup .button2 {
+    width: 100px;
+    margin-top: 20px;
+    padding: 10px 0;
+    background: #3a255b;
+    color: #fff;
+    margin-left: 80px;
+    font-family: 'Montserrat', sans-serif;
+    border: 0;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+}
+        </style>
+    </head>
+    <body>
+        <header>
+            <a class="cta" href="landingpage.html" target="_self"><button class="back"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></a>
+            <nav class="nav">
+                <a class="cta"><button class="profile" onclick="toLogin()">Log Out</button></a>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="popup" id="popup">
+                <h2>Ganahan gud ka mo out?</h2>
+                <button type="button" class="button1" onclick="toLoginY()">Yes</button><button type="button" class="button2" onclick="backtopro()">No</button>
+            </div>
+            <div class="profile-card">
+                <img src="magic.jpg" class="cover-pic">
+                <img src="profile.jpg" class="profile-pic">
+                <h1>Shadow</h1>
+                <p>Dark Mage</p>
+                <a href="#" class="follow-btn">Follow Me!</a>
+
+                <div class="row">
+                    <div>
+                        <p>Mana Power</p>
+                        <h2>S+++</h2>
+                    </div>
+                    <div>
+                        <p>Rank</p>
+                        <h2>S+++</h2>
+                    </div>
+                    <div>
+                        <p>Physical Strength</p>
+                        <h2>D</h2>
+                    </div>
+                </div>
+                <a href="#" class="view-btn">View Training Method</a>
+            </div>
+        </div>
+        <script>
+        let popup = document.getElementById("popup");
+
+            function toLogin(){
+                popup.classList.add("open-popup");
+            }
+            function backtopro(){
+                popup.classList.remove("open-popup");
+            }
+            function toLoginY(){
+                alert("Ni Out gud sya Sige Bye, HUMPH!");
+                window.location.href = "log-in page.html";
+            }</script>
+    </body>
+</html>
